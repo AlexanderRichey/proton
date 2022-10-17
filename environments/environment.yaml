@@ -1,1 +1,3 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Just having some fun with the environment.
 Resources:
