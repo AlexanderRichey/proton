@@ -10,6 +10,5 @@ schema:
         name:
           type: string
           description: "Name"
-          default: environment
           minLength: 1
           maxLength: 200
