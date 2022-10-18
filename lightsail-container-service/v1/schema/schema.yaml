@@ -7,8 +7,8 @@ schema:
       type: object
       description: "Input properties for the service"
       properties:
-        name:
-          title: "Name"
+        service_name:
+          title: "Service Name"
           type: string
           description: "The name of the container service"
           minLength: 1

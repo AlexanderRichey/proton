@@ -3,7 +3,7 @@ Description: Just having some fun with a service.
 Resources:
   Type: AWS::Lightsail::Container
   Properties:
-    ServiceName: "{{ service_instance.inputs.name }}"
+    ServiceName: "{{ service_instance.inputs.service_name }}"
     Power: "{{ service_instance.inputs.power }}"
     Scale: "{{ service_instance.inputs.scale }}"
     ContainerServiceDeployment:
