@@ -8,11 +8,11 @@ Resources:
     Scale: "{{ service_instance.inputs.scale }}"
     ContainerServiceDeployment:
       Containers:
-        ContainerName: "proton"
-        Image: "{{ service_instance.inputs.image }}"
-        Ports:
-          - Port: 80
-            Protocol: "HTTP"
+        - ContainerName: "proton"
+          Image: "{{ service_instance.inputs.image }}"
+          Ports:
+            - Port: "{{ service_instance.inputs.port }}"
+              Protocol: "HTTP"
       PublicEndpoint:
         ContainerName: "proton"
-        ContainerPort: 80
+        ContainerPort: "{{ service_instance.inputs.port }}"
