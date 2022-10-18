@@ -1,1 +1,3 @@
-# proton
+# Proton
+
+Having fun with Proton ⚛️
