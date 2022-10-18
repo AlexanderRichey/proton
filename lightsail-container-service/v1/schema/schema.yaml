@@ -1,0 +1,41 @@
+schema:
+  format:
+    openapi: "3.0.0"
+  service_input_type: "ServiceInput"
+  types:
+    ServiceInput:
+      type: object
+      description: "Input properties for the service"
+      properties:
+        name:
+          title: "Name"
+          type: string
+          description: "The name of the container service"
+          minLength: 1
+          maxLength: 200
+        port:
+          title: "Port"
+          type: number
+          description: "The port to route traffic to"
+          default: 80
+          minimum: 0
+          maximum: 65535
+        power:
+          title: "Power"
+          type: string
+          description: "The power of the service you want to run"
+          enum: ["nano", "micro", "small", "medium", "large"]
+          default: "nano"
+        scale:
+          title: "Scale"
+          type: number
+          description: "The scale of the service"
+          default: 1
+          minimum: 1
+          maximum: 20
+        image:
+          title: "Image"
+          type: string
+          description: "The name/url of the container image"
+          minLength: 1
+          maxLength: 200
