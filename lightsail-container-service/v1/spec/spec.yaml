@@ -1,0 +1,10 @@
+proton: ServiceSpec
+instances:
+  - environment: environments
+    name: "nyan-cat"
+    spec:
+      service_name: "nyan-cat"
+      power: "nano"
+      scale: 1
+      image: "daviey/nyan-cat-web"
+      port: 80

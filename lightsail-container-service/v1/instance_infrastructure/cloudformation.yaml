@@ -1,18 +1,19 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: Just having some fun with a service.
 Resources:
-  Type: "AWS::Lightsail::Container"
-  Properties:
-    ServiceName: "{{ service_instance.inputs.service_name }}"
-    Power: "{{ service_instance.inputs.power }}"
-    Scale: {{ service_instance.inputs.scale }}
-    ContainerServiceDeployment:
-      Containers:
-        - ContainerName: "proton"
-          Image: "{{ service_instance.inputs.image }}"
-          Ports:
-            - Port: {{ service_instance.inputs.port }}
-              Protocol: "HTTP"
-      PublicEndpoint:
-        ContainerName: "proton"
-        ContainerPort: {{ service_instance.inputs.port }}
+  ContainerService:
+    Type: AWS::Lightsail::Container
+    Properties:
+      ServiceName: "{{ service_instance.inputs.service_name }}"
+      Power: "{{ service_instance.inputs.power }}"
+      Scale: {{ service_instance.inputs.scale }}
+      ContainerServiceDeployment:
+        Containers:
+          - ContainerName: "proton"
+            Image: "{{ service_instance.inputs.image }}"
+            Ports:
+              - Port: {{ service_instance.inputs.port }}
+                Protocol: "HTTP"
+        PublicEndpoint:
+          ContainerName: "proton"
+          ContainerPort: {{ service_instance.inputs.port }}
