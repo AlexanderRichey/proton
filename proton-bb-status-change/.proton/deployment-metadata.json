@@ -1,0 +1,10 @@
+{
+  "deploymentId" : "d0e4b076-262e-4b5f-83d2-f927740e7b13",
+  "isResourceDeleted" : false,
+  "resourceMetadata" : {
+    "arn" : "arn:aws:proton:us-east-1:521909371964:environment/proton-bb-status-change",
+    "templateArn" : "arn:aws:proton:us-east-1:521909371964:environment-template/proton-bb-status-change",
+    "templateMajorVersion" : "1",
+    "templateMinorVersion" : "0"
+  }
+}
