@@ -32,7 +32,7 @@ schema:
           description: "The scale of the service"
           default: 1
           minimum: 1
-          maximum: 20
+          maximum: 10
         image:
           title: "Image"
           type: string
